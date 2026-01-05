@@ -4,7 +4,15 @@ import { useState } from 'react';
 import { supabase } from '@/lib/supabase';
 import Image from 'next/image';
 
-const years = Array.from({ length: 2025 - 1986 + 1 }, (_, i) => 2025 - i);
+const BIRTH_YEAR = 1986;
+const years = Array.from({ length: 2025 - BIRTH_YEAR + 1 }, (_, i) => 2025 - i);
+
+const getAgeLabel = (year: number) => {
+  const age = year - BIRTH_YEAR;
+  if (age === 0) return `${year} (newborn)`;
+  if (age === 1) return `${year} (1 year old)`;
+  return `${year} (${age} years old)`;
+};
 
 export default function Home() {
   const [name, setName] = useState('');
@@ -140,7 +148,7 @@ export default function Home() {
               <option value="">Select a year</option>
               {years.map((year) => (
                 <option key={year} value={year}>
-                  {year}
+                  {getAgeLabel(year)}
                 </option>
               ))}
             </select>
