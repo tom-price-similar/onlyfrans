@@ -85,9 +85,14 @@ export default function Home() {
     return (
       <main className="min-h-screen bg-gray-50">
         <div className="w-full max-w-[970px] mx-auto">
-          <div className="w-full h-[200px] sm:h-[300px] bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center">
-            <span className="text-gray-500 text-sm">Header Image Placeholder (970x300)</span>
-          </div>
+          <Image
+            src="/cover.jpg"
+            alt="Memories for Fran"
+            width={970}
+            height={500}
+            className="w-full h-auto"
+            priority
+          />
         </div>
 
         <div className="max-w-md mx-auto px-4 py-12 text-center">
@@ -108,9 +113,14 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
       <div className="w-full max-w-[970px] mx-auto">
-        <div className="w-full h-[200px] sm:h-[300px] bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center">
-          <span className="text-gray-500 text-sm">Header Image Placeholder (970x300)</span>
-        </div>
+        <Image
+          src="/cover.jpg"
+          alt="Memories for Fran"
+          width={970}
+          height={500}
+          className="w-full h-auto"
+          priority
+        />
       </div>
 
       <div className="max-w-md mx-auto px-4 py-8">
