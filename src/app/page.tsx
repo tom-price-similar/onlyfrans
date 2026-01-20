@@ -124,10 +124,6 @@ export default function Home() {
       </div>
 
       <div className="max-w-md mx-auto px-4 py-8">
-        <p className="text-center text-gray-600 mb-8">
-          Help us create a special memory book for Fran! Please share your name, when you met her, and a message. You can also add a photo if you&apos;d like.
-        </p>
-
         <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-sm p-6 space-y-5">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
